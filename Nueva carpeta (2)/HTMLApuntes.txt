@@ -1,0 +1,16 @@
+HTML.
+
+*-------------------*
+Estructura basica.
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mi primer documento</title>
+		<meta charset = "UTF-8"/>
+</head>
+<body>
+	<p> Hola!</p>
+</body>
+</html>
+

@@ -1,0 +1,244 @@
+java.                                                                           
+                                                                                   
+concepto de codigo.
+
+Solamente se utiliza mayuscula para escribir las clases.
+
+abrir fichero.
+leer fichero.                                                          
+procesar un fichero.
+cerrar fichero.
+*----------------------------------*
+Formas de declarar una variable en Java.
+
+Tipo identificador = 30;
+tipo identificador;
+identificador = 30;
+
+enteros.
+
+byte number1= 1; (Almacenamiento 1byte)
+short number2= 2; (Alm. 2 byte)
+int number3 = 3; (Alm. 4 byte)
+long number4= 4; (Alm. 8 byte)
+
+punto flotante.
+
+float decimal1 = 4.9f;
+double decimal2 = 9.99d;
+
+caracter.
+
+char caracter1 = "a";
+
+booleanos.
+
+boolean verdadero = true;
+boolean falso = false;
+
+Cadenas de texto.
+
+String nombre = "Alan";
+String apellido = "Almeida";
+
+Tipos envoltorio.
+
+(generan un dato nulo de un tipo primitivo)
+
+Integer numero = null;
+Long numero2 = 2L;
+*------------------------------------------*
+
+Operadores .
+
+Operadores aritmeticos.
+/, +, -, *, %
+
+int number1= 1;
+int number2 =2;
+
+int resultado= number1+ number2;
+int resultado 2 = number1 - number2;
+int resultado 3 = number1 * number2;
+double resultado4 = number1 / number 2 (en caso de división de decimales lo mejor es utilizar double y no int)
+
+Operadores logicos, de relación, comparación o booleanos.
+
+/*, >, >=, <, <=, ==, !=, && (and), || (or), true, false, !true(false)
+
+Asignación.
+
+/*, =, +=, -=, /=, *=, %=, */
+
+Incremento.
+++
+
+Decremento.
+--
+
+Concatenación (para crear cadenas de Strings o texto).
+
++
+
+*---------------------------------------*
+
+Listas de palabras reservadas(key words) de Java:
+
+https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html
+
+*---------------------------------------*
+
+Funciones.
+
+se debe crear una clase (archivo java)
+se debe crear un metodo main (metodo ejecutable para corroborar que todo funciona)
+se debe crear una función.
+
+_¿Que es una función?
+
+Son agrupaciones de sentencias que pueden ser reutilizadas en cualquier punto de la aplicación.
+
+public class Funciones {
+
+holaMundo();
+
+System.out.println("Hola mundo");
+}
+
+----------------------------
+public static void holaMundo();
+
+(se le llama metodos cuando se trata de objetos y funciones cuando no se trata de objetos)
+
+-------------------------
+
+private (solo invocable desde adentro)
+
+private static void String holaMundo(){
+System.out.println("Hola mundo);
+-------------------------
+holaMundo (name "Alan"); (esto se denomina parametro.
+
+private static void holaMundo (String name) {
+System.out.println (hola" + name);
+}
+
+--------------------------------
+String hola = devolverHola();
+System.out.println(hola);
+
+private static void String devolverHola(){
+return "Hola";
+}
+
+-------------------
+CUANDO la función es private static no se puede invocar desde otra clase, pertenece solamente a la clase en donde fue invocada y creada en un primer lugar, para eso debería llamarse "public class".
+
+El tipo de datos "void" hace que la funcion no devuelva nada. 
+Si se quiere devolver un texto se pone "String", "sum" y se debe utilizar el "return".
+
+*---------------------------------*
+
+Sobrecarga de funciones.
+
+Una función se sobrecarga cuando se duplica o más su nombre y no nos está dando ningún error.
+
+public static void holaMundo(){
+System.out.println("Hola mundo");
+
+}
+private static void holaMundo(String name){
+System.out.println("Hola" + name);
+
+}
+private static void holaMundo (Integer number){
+System.out.println ("El numero es: " + number);
+}
+(De esta forma se puede sobrecarcar una función agregando argumentos diferentes y puede seguir siendo usada).
+
+De esta forma al poner holaMundo(); se autocompletaria con el tipo de parametro que se va a usar (numero, texto, etc)
+
+y solo quedaría aclarar la función deseada:
+holaMundo(number:4);
+holaMundo(nombre: name);
+y con control + click nos llevaría a la función correspondiente.
+
+*----------------------------------------------*
+
+Sentencias if y sus posibilidades.
+
+Se denominan estructuras de control y se utilizan para variables booleanas y operadores logicos.
+
+public class ifElse{
+
+public static void main(string[] args){
+	boolean check = 5< 10;
+
+	if (check){
+	System.out.println("Verdadero");
+
+}	
+
+}
+}
+
+int number1 = 50;
+int number2 = 10;
+int number3 = 20;
+
+if(number1 < number2 && number2 < number3){
+	System.out.println("verdadero");
+}else{
+
+	System.out.println("falso);
+}
+---------------------------------------------
+
+if(number1 < number2 && number2 < number3){
+	System.out.println("verdadero");
+}else if (number3 < number4){
+
+	System.out.println("else if");
+}else{
+
+
+}
+
+Otra forma de saber si el programa corre es elegir la opción depurar (debug) y poner un punto de quiebre (breakpoint) donde queremos que se detenga para así ver si el programa corre según lo deseado.
+
+*---------------------------------------*
+
+Bucles for.
+
+Es una estructura de control de repetición junto con los bucles while.
+
+for (int i = 0; i < 10; i++){
+System.out.println("Hola mundo");
+}
+se cumple un bucle hasta llegar a un numero "menor a 10", es decir, que cumple los valores de 0 a nueve. Esas son las veces que el codigo es impreso por el bucle for (for loop)
+
+Si se pusiese "<=" si imprimiria hasta el número 10.
+
+Se utiliza para trabajar por ejemplo con arrays, para iterar sobre sus valores para imrpimirlos, moverlos o hacer algún tipo de acción sobre ellos.
+
+se puede utilizar un if, para combinar y generar diferentes comprobaciones.
+
+----------------------------------
+
+Bucle while.
+
+Con el bucle while lo que se busca es evaular una condición.
+
+boolean check = true;
+
+int count = 0;
+
+while(count < 10){
+
+System.out.println("Hola mundo");
+count++; (esta es la condición)
+
+}
+
+se puede combinar con un if para romper la evaluación.
+
